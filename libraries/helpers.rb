@@ -87,6 +87,7 @@ module Rackbox
 
       # TODO issue: nginx not reload enabled site
       nginx_site app["appname"] do
+        template nil
         notifies :reload, "service[nginx]"
       end
     end
